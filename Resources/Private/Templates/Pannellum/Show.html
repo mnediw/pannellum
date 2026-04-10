@@ -1,0 +1,31 @@
+{namespace f=TYPO3\CMS\Fluid\ViewHelpers}
+<f:layout name="Default" />
+<f:section name="Main">
+    <!-- Load Pannellum assets via Fluid Asset ViewHelpers (deduplicated across elements) -->
+    <f:asset.css
+        identifier="pannellum-css"
+        href="https://cdn.jsdelivr.net/npm/pannellum@latest/build/pannellum.css"
+        media="all" />
+
+    <f:asset.script
+        identifier="pannellum-js"
+        src="https://cdn.jsdelivr.net/npm/pannellum@latest/build/pannellum.js"
+        defer="true" />
+    <f:asset.script identifier="pannellum-init" src="EXT:pannellum/Resources/Public/JavaScript/pannellum-init.js" defer="true" priority="true"/>
+
+    <style>
+        .pannellum-container {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            margin:auto;
+        }
+        .pannellum-container .pnlm-preview-img {
+            background-repeat:no-repeat;
+            background-size: initial;
+        }
+    </style>
+
+    <div id="panorama-{contentElementId}"
+         class="pannellum-container"
+         data-pannellum-config='{configJson -> f:format.raw()}'></div>
+</f:section>

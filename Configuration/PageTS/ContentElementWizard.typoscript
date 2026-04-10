@@ -1,0 +1,29 @@
+mod.wizards.newContentElement.wizardItems.plugins {
+  elements {
+    pannellum_panorama {
+      iconIdentifier = extension-pannellum
+      title = LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:plugin.title
+      description = LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:plugin.title
+      tt_content_defValues {
+        CType = list
+        list_type = pannellum_panorama
+      }
+    }
+  }
+  show := addToList(pannellum_panorama)
+}
+
+# New record wizard entry for Scene records
+mod.wizards.newRecord {
+  elements {
+    tx_pannellum_scene {
+      iconIdentifier = extension-pannellum
+      title = LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene
+      description = LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene
+      tt_content_defValues {
+      }
+      table = tx_pannellum_scene
+    }
+  }
+  show := addToList(tx_pannellum_scene)
+}

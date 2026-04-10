@@ -1,0 +1,12 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Diw\Pannellum\:
+    resource: '../Classes/*'
+
+  Diw\Pannellum\Controller\PannellumController:
+    public: true
+    tags: ['extbase.controller']

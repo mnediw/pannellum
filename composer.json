@@ -1,0 +1,22 @@
+{
+  "name": "diw/pannellum",
+  "type": "typo3-cms-extension",
+  "description": "TYPO3 extension providing a plugin to render 360° panoramas via Pannellum.",
+  "license": "MIT",
+  "require": {
+    "php": ">=8.1",
+    "typo3/cms-core": "^12.4 || ^13.0",
+    "typo3/cms-extbase": "^12.4 || ^13.0",
+    "typo3/cms-frontend": "^12.4 || ^13.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Diw\\Pannellum\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "pannellum"
+    }
+  }
+}

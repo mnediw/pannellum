@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" product-name="pannellum">
+    <header/>
+    <body>
+      <trans-unit id="plugin.title">
+        <source>360Grad Panorama</source>
+      </trans-unit>
+
+      <trans-unit id="flexform.panorama.sheet.defaults"><source>Defaults</source></trans-unit>
+      <trans-unit id="flexform.panorama.defaults.sceneFadeDuration"><source>Scene fade duration (ms)</source></trans-unit>
+      <trans-unit id="flexform.panorama.defaults.sceneFadeDuration.description"><source>Transition duration when switching scenes, in milliseconds.</source></trans-unit>
+      <trans-unit id="flexform.panorama.defaults.autoLoad"><source>Autoload</source></trans-unit>
+      <trans-unit id="flexform.panorama.defaults.autoLoad.label"><source>Load panorama automatically</source></trans-unit>
+      <trans-unit id="flexform.panorama.defaults.autoLoad.description"><source>If enabled, the panorama loads automatically on page load.</source></trans-unit>
+      <trans-unit id="flexform.panorama.defaults.autoRotate"><source>Auto rotate speed</source></trans-unit>
+      <trans-unit id="flexform.panorama.defaults.autoRotate.description"><source>If set, starts autorotation at the given speed (deg/s); negative values rotate clockwise.</source></trans-unit>
+      <trans-unit id="flexform.panorama.defaults.author"><source>Author</source></trans-unit>
+      <trans-unit id="flexform.panorama.defaults.author.description"><source>Author attribution text displayed in the viewer.</source></trans-unit>
+
+      <!-- tt_content field label for preview image (FAL) -->
+      <trans-unit id="tt_content.tx_pannellum_preview"><source>Preview image</source></trans-unit>
+
+      <trans-unit id="flexform.panorama.sheet.records"><source>Scenes</source></trans-unit>
+      <trans-unit id="flexform.panorama.records.sceneRecords"><source>Select scenes</source></trans-unit>
+      <trans-unit id="flexform.panorama.records.sceneRecords.description"><source>Select one or more scenes to include. The first selected scene will be used as the initial scene.</source></trans-unit>
+
+      <!-- Options sheet (additional viewer options) -->
+      <trans-unit id="flexform.panorama.sheet.options"><source>Options</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.authorURL"><source>Author URL</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.authorURL.description"><source>If set, the displayed author text is hyperlinked to this URL. Only has an effect if the author is set.</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.autoRotateInactivityDelay"><source>Auto-rotate inactivity delay (ms)</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.autoRotateInactivityDelay.description"><source>Delay in milliseconds to start autorotation after user activity ceases. Only has an effect if autoRotate is set; viewer is panned to the initial pitch before starting.</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.autoRotateStopDelay"><source>Auto-rotate stop delay (ms)</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.autoRotateStopDelay.description"><source>Delay in milliseconds to stop autorotation after the panorama is loaded. Only has an effect if autoRotate is set.</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.orientationOnByDefault"><source>Device orientation on by default</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.orientationOnByDefault.description"><source>If enabled and supported by the device, orientation control is used when the panorama is loaded. Defaults to false.</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.showZoomCtrl"><source>Show zoom controls</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.showZoomCtrl.description"><source>If disabled, the zoom controls are not displayed. Defaults to true.</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.keyboardZoom"><source>Keyboard zoom</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.keyboardZoom.description"><source>If disabled, zooming with the keyboard is not possible. Defaults to true.</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.mouseZoom"><source>Mouse wheel zoom</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.mouseZoom.description"><source>Controls zooming with the mouse wheel. Defaults to true. Can be set to fullscreenonly so it only works in fullscreen.</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.draggable"><source>Draggable</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.draggable.description"><source>If disabled, mouse and touch dragging is not possible. Defaults to true.</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.disableKeyboardCtrl"><source>Disable keyboard controls</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.disableKeyboardCtrl.description"><source>If enabled, all keyboard controls are disabled. Defaults to false.</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.showFullscreenCtrl"><source>Show fullscreen control</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.showFullscreenCtrl.description"><source>If disabled, the fullscreen control is not displayed. Defaults to true. The button only appears if the browser supports the fullscreen API.</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.showControls"><source>Show controls</source></trans-unit>
+      <trans-unit id="flexform.panorama.options.showControls.description"><source>If disabled, no controls are displayed. Defaults to true.</source></trans-unit>
+
+      <!-- Generic labels used in FlexForm controls -->
+      <trans-unit id="flexform.checkbox.enabled"><source>Enabled</source></trans-unit>
+      <trans-unit id="flexform.select.inherit"><source>— inherit default —</source></trans-unit>
+
+      <!-- Scene record labels -->
+      <trans-unit id="tx_pannellum_scene"><source>Scene</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.identifier"><source>Identifier (key)</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.identifier.description"><source>Unique key used as the scene ID in the configuration; use lowercase letters, numbers, dashes or underscores.</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.title"><source>Title</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.title.description"><source>Human-readable title shown for the scene.</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.type"><source>Type</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.type.description"><source>Scene type. For standard single-image panoramas, keep "equirectangular".</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.panorama"><source>Panorama image URL</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.panorama.description"><source>Panorama image file used for this scene.</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.hotSpotDebug"><source>Hotspot debug</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.hotSpotDebug.description"><source>Shows hotspot location markers for debugging in the viewer.</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.hotspots"><source>Hotspots</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.hotspots.description"><source>Configure hotspots for this scene using the fields below.</source></trans-unit>
+
+      <!-- Scene hotspots FlexForm labels -->
+      <trans-unit id="flexform.scene.sheet.hotspots"><source>Hotspots</source></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.section"><source>Hotspots</source></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.hotspot"><source>Hotspot</source></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.pitch"><source>Pitch</source></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.pitch.description"><source>Pitch angle in degrees; 0 is the horizon, positive values look up, negative look down.</source></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.yaw"><source>Yaw</source></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.yaw.description"><source>Yaw angle in degrees; 0 is due north, positive values rotate clockwise.</source></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.type"><source>Type</source></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.type.description"><source>Hot spot type: "scene" links to another scene; "info" opens a URL.</source></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.text"><source>Text</source></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.text.description"><source>Text label displayed for the hot spot.</source></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.sceneId"><source>Target scene (identifier)</source></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.sceneId.description"><source>For type "scene": choose the ID of the target scene. Not applicable for type "info".</source></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.url"><source>URL</source></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.url.description"><source>For type "info": link target URL. Not applicable for type "scene".</source></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.targetPitch"><source>Target pitch</source></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.targetPitch.description"><source>For type "scene": number (degrees) or "same".</source></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.targetYaw"><source>Target yaw</source></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.targetYaw.description"><source>For type "scene": number (degrees) or "same" / "sameAzimuth".</source></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.targetHfov"><source>Target HFOV</source></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.targetHfov.description"><source>For type "scene": number (degrees) or "same".</source></trans-unit>
+    </body>
+  </file>
+  <file source-language="de" datatype="plaintext" original="messages" product-name="pannellum">
+    <header/>
+    <body>
+      <trans-unit id="plugin.title">
+        <source>360Grad Panorama</source>
+        <target>360Grad Panorama</target>
+      </trans-unit>
+
+      <trans-unit id="flexform.panorama.sheet.defaults"><source>Vorgaben</source><target>Vorgaben</target></trans-unit>
+      <trans-unit id="flexform.panorama.defaults.sceneFadeDuration"><source>Szene-Überblendung (ms)</source><target>Szene-Überblendung (ms)</target></trans-unit>
+      <trans-unit id="flexform.panorama.defaults.sceneFadeDuration.description"><source>Überblenddauer beim Szenenwechsel in Millisekunden.</source><target>Überblenddauer beim Szenenwechsel in Millisekunden.</target></trans-unit>
+      <trans-unit id="flexform.panorama.defaults.autoLoad"><source>Automatisch laden</source><target>Automatisch laden</target></trans-unit>
+      <trans-unit id="flexform.panorama.defaults.autoLoad.label"><source>Panorama automatisch laden</source><target>Panorama automatisch laden</target></trans-unit>
+      <trans-unit id="flexform.panorama.defaults.autoLoad.description"><source>Wenn aktiviert, lädt das Panorama automatisch beim Seitenaufruf.</source><target>Wenn aktiviert, lädt das Panorama automatisch beim Seitenaufruf.</target></trans-unit>
+      <trans-unit id="flexform.panorama.defaults.autoRotate"><source>Auto-Rotation</source><target>Auto-Rotation</target></trans-unit>
+      <trans-unit id="flexform.panorama.defaults.autoRotate.description"><source>Startet die automatische Rotation mit der angegebenen Geschwindigkeit (°/s); negative Werte drehen im Uhrzeigersinn.</source><target>Startet die automatische Rotation mit der angegebenen Geschwindigkeit (°/s); negative Werte drehen im Uhrzeigersinn.</target></trans-unit>
+      <trans-unit id="flexform.panorama.defaults.author"><source>Autor</source><target>Autor</target></trans-unit>
+      <trans-unit id="flexform.panorama.defaults.author.description"><source>Urheber/Autor, der im Viewer angezeigt wird.</source><target>Urheber/Autor, der im Viewer angezeigt wird.</target></trans-unit>
+
+      <!-- tt_content field label for preview image (FAL) -->
+      <trans-unit id="tt_content.tx_pannellum_preview"><source>Vorschaubild</source><target>Vorschaubild</target></trans-unit>
+
+      <trans-unit id="flexform.panorama.sheet.records"><source>Szenen</source><target>Szenen</target></trans-unit>
+      <trans-unit id="flexform.panorama.records.sceneRecords"><source>Szenen auswählen</source><target>Szenen auswählen</target></trans-unit>
+      <trans-unit id="flexform.panorama.records.sceneRecords.description"><source>Eine oder mehrere Szenen auswählen. Die zuerst ausgewählte Szene wird als Startszene verwendet.</source><target>Eine oder mehrere Szenen auswählen. Die zuerst ausgewählte Szene wird als Startszene verwendet.</target></trans-unit>
+
+      <!-- Options sheet (additional viewer options) -->
+      <trans-unit id="flexform.panorama.sheet.options"><source>Optionen</source><target>Optionen</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.authorURL"><source>Autor‑URL</source><target>Autor‑URL</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.authorURL.description"><source>Wenn gesetzt, wird der Autor‑Text mit dieser URL verlinkt. Wirkt nur, wenn auch der Autor gesetzt ist.</source><target>Wenn gesetzt, wird der Autor‑Text mit dieser URL verlinkt. Wirkt nur, wenn auch der Autor gesetzt ist.</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.autoRotateInactivityDelay"><source>Auto‑Rotation: Verzögerung nach Inaktivität (ms)</source><target>Auto‑Rotation: Verzögerung nach Inaktivität (ms)</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.autoRotateInactivityDelay.description"><source>Verzögerung in Millisekunden, nach der nach Ende der Nutzeraktivität automatisch rotiert wird. Wirkt nur, wenn autoRotate gesetzt ist; vor dem Start wird auf die anfängliche Neigung geschwenkt.</source><target>Verzögerung in Millisekunden, nach der nach Ende der Nutzeraktivität automatisch rotiert wird. Wirkt nur, wenn autoRotate gesetzt ist; vor dem Start wird auf die anfängliche Neigung geschwenkt.</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.autoRotateStopDelay"><source>Auto‑Rotation: Stopp‑Verzögerung (ms)</source><target>Auto‑Rotation: Stopp‑Verzögerung (ms)</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.autoRotateStopDelay.description"><source>Verzögerung in Millisekunden, nach der die automatische Rotation nach dem Laden des Panoramas beendet wird. Wirkt nur, wenn autoRotate gesetzt ist.</source><target>Verzögerung in Millisekunden, nach der die automatische Rotation nach dem Laden des Panoramas beendet wird. Wirkt nur, wenn autoRotate gesetzt ist.</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.orientationOnByDefault"><source>Geräte‑Orientierung standardmäßig aktiv</source><target>Geräte‑Orientierung standardmäßig aktiv</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.orientationOnByDefault.description"><source>Wenn aktiviert und vom Gerät unterstützt, wird die Ausrichtungsteuerung beim Laden verwendet. Standard ist aus.</source><target>Wenn aktiviert und vom Gerät unterstützt, wird die Ausrichtungsteuerung beim Laden verwendet. Standard ist aus.</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.showZoomCtrl"><source>Zoom‑Steuerung anzeigen</source><target>Zoom‑Steuerung anzeigen</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.showZoomCtrl.description"><source>Wenn deaktiviert, werden die Zoom‑Schaltflächen nicht angezeigt. Standard ist an.</source><target>Wenn deaktiviert, werden die Zoom‑Schaltflächen nicht angezeigt. Standard ist an.</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.keyboardZoom"><source>Tastatur‑Zoom</source><target>Tastatur‑Zoom</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.keyboardZoom.description"><source>Wenn deaktiviert, ist Zoomen per Tastatur nicht möglich. Standard ist an.</source><target>Wenn deaktiviert, ist Zoomen per Tastatur nicht möglich. Standard ist an.</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.mouseZoom"><source>Mausrad‑Zoom</source><target>Mausrad‑Zoom</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.mouseZoom.description"><source>Steuert das Zoomen mit dem Mausrad. Standard ist an. Kann auf fullscreenonly gesetzt werden, damit es nur im Vollbildmodus aktiv ist.</source><target>Steuert das Zoomen mit dem Mausrad. Standard ist an. Kann auf fullscreenonly gesetzt werden, damit es nur im Vollbildmodus aktiv ist.</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.draggable"><source>Per Maus/Touch ziehbar</source><target>Per Maus/Touch ziehbar</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.draggable.description"><source>Wenn deaktiviert, ist Ziehen per Maus und Touch nicht möglich. Standard ist an.</source><target>Wenn deaktiviert, ist Ziehen per Maus und Touch nicht möglich. Standard ist an.</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.disableKeyboardCtrl"><source>Tastatursteuerung deaktivieren</source><target>Tastatursteuerung deaktivieren</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.disableKeyboardCtrl.description"><source>Wenn aktiviert, sind alle Tastatur‑Steuerungen deaktiviert. Standard ist aus.</source><target>Wenn aktiviert, sind alle Tastatur‑Steuerungen deaktiviert. Standard ist aus.</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.showFullscreenCtrl"><source>Vollbild‑Schaltfläche anzeigen</source><target>Vollbild‑Schaltfläche anzeigen</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.showFullscreenCtrl.description"><source>Wenn deaktiviert, wird die Vollbild‑Schaltfläche nicht angezeigt. Standard ist an. Die Schaltfläche erscheint nur, wenn der Browser die Fullscreen‑API unterstützt.</source><target>Wenn deaktiviert, wird die Vollbild‑Schaltfläche nicht angezeigt. Standard ist an. Die Schaltfläche erscheint nur, wenn der Browser die Fullscreen‑API unterstützt.</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.showControls"><source>Steuerelemente anzeigen</source><target>Steuerelemente anzeigen</target></trans-unit>
+      <trans-unit id="flexform.panorama.options.showControls.description"><source>Wenn deaktiviert, werden keine Steuerelemente angezeigt. Standard ist an.</source><target>Wenn deaktiviert, werden keine Steuerelemente angezeigt. Standard ist an.</target></trans-unit>
+
+      <!-- Generic labels used in FlexForm controls -->
+      <trans-unit id="flexform.checkbox.enabled"><source>Aktiviert</source><target>Aktiviert</target></trans-unit>
+      <trans-unit id="flexform.select.inherit"><source>— Standard übernehmen —</source><target>— Standard übernehmen —</target></trans-unit>
+
+      <!-- Scene record labels -->
+      <trans-unit id="tx_pannellum_scene"><source>Szene</source><target>Szene</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.identifier"><source>Kennung (Key)</source><target>Kennung (Key)</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.identifier.description"><source>Eindeutige Kennung, die als Szenen-ID in der Konfiguration verwendet wird; Kleinbuchstaben, Zahlen, Bindestrich oder Unterstrich.</source><target>Eindeutige Kennung, die als Szenen-ID in der Konfiguration verwendet wird; Kleinbuchstaben, Zahlen, Bindestrich oder Unterstrich.</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.title"><source>Titel</source><target>Titel</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.title.description"><source>Menschlich lesbarer Titel der Szene.</source><target>Menschlich lesbarer Titel der Szene.</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.type"><source>Typ</source><target>Typ</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.type.description"><source>Szenentyp. Für Standard‑Panoramen mit Einzelbild "equirectangular" verwenden.</source><target>Szenentyp. Für Standard‑Panoramen mit Einzelbild "equirectangular" verwenden.</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.panorama"><source>Panorama-Bild URL</source><target>Panorama-Bild URL</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.panorama.description"><source>Panorama‑Bilddatei, die für diese Szene verwendet wird.</source><target>Panorama‑Bilddatei, die für diese Szene verwendet wird.</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.hotSpotDebug"><source>Hotspot-Debug</source><target>Hotspot-Debug</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.hotSpotDebug.description"><source>Zeigt zur Fehlersuche Markierungen der Hotspot‑Positionen im Viewer an.</source><target>Zeigt zur Fehlersuche Markierungen der Hotspot‑Positionen im Viewer an.</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.hotspots"><source>Hotspots</source><target>Hotspots</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.hotspots.description"><source>Hotspots für diese Szene über die folgenden Felder konfigurieren.</source><target>Hotspots für diese Szene über die folgenden Felder konfigurieren.</target></trans-unit>
+
+      <!-- Scene hotspots FlexForm labels -->
+      <trans-unit id="flexform.scene.sheet.hotspots"><source>Hotspots</source><target>Hotspots</target></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.section"><source>Hotspots</source><target>Hotspots</target></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.hotspot"><source>Hotspot</source><target>Hotspot</target></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.pitch"><source>Pitch</source><target>Pitch</target></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.pitch.description"><source>Neigungswinkel in Grad; 0 ist der Horizont, positive Werte schauen nach oben, negative nach unten.</source><target>Neigungswinkel in Grad; 0 ist der Horizont, positive Werte schauen nach oben, negative nach unten.</target></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.yaw"><source>Yaw</source><target>Yaw</target></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.yaw.description"><source>Gierwinkel in Grad; 0 zeigt nach Norden, positive Werte drehen im Uhrzeigersinn.</source><target>Gierwinkel in Grad; 0 zeigt nach Norden, positive Werte drehen im Uhrzeigersinn.</target></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.type"><source>Typ</source><target>Typ</target></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.type.description"><source>Hotspot‑Typ: "scene" verlinkt zu einer anderen Szene; "info" öffnet eine URL.</source><target>Hotspot‑Typ: "scene" verlinkt zu einer anderen Szene; "info" öffnet eine URL.</target></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.text"><source>Text</source><target>Text</target></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.text.description"><source>Textbeschriftung, die beim Hotspot angezeigt wird.</source><target>Textbeschriftung, die beim Hotspot angezeigt wird.</target></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.sceneId"><source>Zielszene (Kennung)</source><target>Zielszene (Kennung)</target></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.sceneId.description"><source>Für Typ „scene“: ID/Kennung der Zielszene wählen. Nicht anwendbar für Typ „info“.</source><target>Für Typ „scene“: ID/Kennung der Zielszene wählen. Nicht anwendbar für Typ „info“.</target></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.url"><source>URL</source><target>URL</target></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.url.description"><source>Für Typ „info“: Ziel‑URL des Links. Nicht anwendbar für Typ „scene“.</source><target>Für Typ „info“: Ziel‑URL des Links. Nicht anwendbar für Typ „scene“.</target></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.targetPitch"><source>Ziel‑Pitch</source><target>Ziel‑Pitch</target></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.targetPitch.description"><source>Für Typ „scene“: Zahl (Grad) oder „same“.</source><target>Für Typ „scene“: Zahl (Grad) oder „same“.</target></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.targetYaw"><source>Ziel‑Yaw</source><target>Ziel‑Yaw</target></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.targetYaw.description"><source>Für Typ „scene“: Zahl (Grad) oder „same“ / „sameAzimuth“.</source><target>Für Typ „scene“: Zahl (Grad) oder „same“ / „sameAzimuth“.</target></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.targetHfov"><source>Ziel‑HFOV</source><target>Ziel‑HFOV</target></trans-unit>
+      <trans-unit id="flexform.scene.hotspots.targetHfov.description"><source>Für Typ „scene“: Zahl (Grad) oder „same“.</source><target>Für Typ „scene“: Zahl (Grad) oder „same“.</target></trans-unit>
+    </body>
+  </file>
+</xliff>

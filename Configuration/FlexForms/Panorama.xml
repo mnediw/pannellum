@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<T3DataStructure>
+  <sheets>
+    <!-- Defaults sheet -->
+    <sDEF>
+      <ROOT>
+        <TCEforms>
+          <sheetTitle>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.sheet.defaults</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+          <settings.default.sceneFadeDuration>
+            <TCEforms>
+              <label>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.defaults.sceneFadeDuration</label>
+              <description>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.defaults.sceneFadeDuration.description</description>
+              <config>
+                <type>input</type>
+                <eval>int</eval>
+                <size>10</size>
+                <default>3000</default>
+              </config>
+            </TCEforms>
+          </settings.default.sceneFadeDuration>
+          <settings.default.autoLoad>
+            <TCEforms>
+              <label>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.defaults.autoLoad</label>
+              <description>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.defaults.autoLoad.description</description>
+              <config>
+                <type>check</type>
+                <items>
+                  <numIndex index="0">
+                    <numIndex index="0">LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.defaults.autoLoad.label</numIndex>
+                  </numIndex>
+                </items>
+                <default>1</default>
+              </config>
+            </TCEforms>
+          </settings.default.autoLoad>
+          <settings.default.autoRotate>
+            <TCEforms>
+              <label>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.defaults.autoRotate</label>
+              <description>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.defaults.autoRotate.description</description>
+              <config>
+                <type>input</type>
+                <eval>int</eval>
+                <size>10</size>
+                <default>-2</default>
+              </config>
+            </TCEforms>
+          </settings.default.autoRotate>
+          <settings.default.author>
+            <TCEforms>
+              <label>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.defaults.author</label>
+              <description>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.defaults.author.description</description>
+              <config>
+                <type>input</type>
+                <eval>trim</eval>
+                <size>50</size>
+              </config>
+            </TCEforms>
+          </settings.default.author>
+        </el>
+      </ROOT>
+    </sDEF>
+
+    <!-- Records sheet: select existing Scene records -->
+    <records>
+      <ROOT>
+        <TCEforms>
+          <sheetTitle>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.sheet.records</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+          <settings.sceneRecords>
+            <TCEforms>
+              <label>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.records.sceneRecords</label>
+              <description>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.records.sceneRecords.description</description>
+              <config>
+                <type>select</type>
+                <renderType>selectMultipleSideBySide</renderType>
+                <foreign_table>tx_pannellum_scene</foreign_table>
+                <enableMultiSelectFilterTextfield>1</enableMultiSelectFilterTextfield>
+                <orderBy>title</orderBy>
+                <size>10</size>
+                <maxitems>999</maxitems>
+                <multiple>1</multiple>
+              </config>
+            </TCEforms>
+          </settings.sceneRecords>
+        </el>
+      </ROOT>
+    </records>
+    
+    <!-- Options sheet: additional Pannellum options -->
+    <options>
+      <ROOT>
+        <TCEforms>
+          <sheetTitle>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.sheet.options</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+          <settings.default.authorURL>
+            <TCEforms>
+              <label>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.authorURL</label>
+              <description>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.authorURL.description</description>
+              <config>
+                <type>input</type>
+                <eval>trim</eval>
+                <size>60</size>
+              </config>
+            </TCEforms>
+          </settings.default.authorURL>
+
+          <settings.default.autoRotateInactivityDelay>
+            <TCEforms>
+              <label>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.autoRotateInactivityDelay</label>
+              <description>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.autoRotateInactivityDelay.description</description>
+              <config>
+                <type>input</type>
+                <eval>int</eval>
+                <size>10</size>
+              </config>
+            </TCEforms>
+          </settings.default.autoRotateInactivityDelay>
+
+          <settings.default.autoRotateStopDelay>
+            <TCEforms>
+              <label>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.autoRotateStopDelay</label>
+              <description>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.autoRotateStopDelay.description</description>
+              <config>
+                <type>input</type>
+                <eval>int</eval>
+                <size>10</size>
+              </config>
+            </TCEforms>
+          </settings.default.autoRotateStopDelay>
+
+          <settings.default.orientationOnByDefault>
+            <TCEforms>
+              <label>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.orientationOnByDefault</label>
+              <description>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.orientationOnByDefault.description</description>
+              <config>
+                <type>check</type>
+                <items>
+                  <numIndex index="0">
+                    <numIndex index="0">LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.checkbox.enabled</numIndex>
+                  </numIndex>
+                </items>
+                <default>0</default>
+              </config>
+            </TCEforms>
+          </settings.default.orientationOnByDefault>
+
+          <settings.default.showZoomCtrl>
+            <TCEforms>
+              <label>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.showZoomCtrl</label>
+              <description>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.showZoomCtrl.description</description>
+              <config>
+                <type>check</type>
+                <items>
+                  <numIndex index="0">
+                    <numIndex index="0">LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.checkbox.enabled</numIndex>
+                  </numIndex>
+                </items>
+                <default>1</default>
+              </config>
+            </TCEforms>
+          </settings.default.showZoomCtrl>
+
+          <settings.default.keyboardZoom>
+            <TCEforms>
+              <label>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.keyboardZoom</label>
+              <description>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.keyboardZoom.description</description>
+              <config>
+                <type>check</type>
+                <items>
+                  <numIndex index="0">
+                    <numIndex index="0">LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.checkbox.enabled</numIndex>
+                  </numIndex>
+                </items>
+                <default>1</default>
+              </config>
+            </TCEforms>
+          </settings.default.keyboardZoom>
+
+          <settings.default.mouseZoom>
+            <TCEforms>
+              <label>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.mouseZoom</label>
+              <description>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.mouseZoom.description</description>
+              <config>
+                <type>select</type>
+                <renderType>selectSingle</renderType>
+                <items>
+                  <numIndex index="0">
+                    <numIndex index="0">LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.select.inherit</numIndex>
+                    <numIndex index="1"></numIndex>
+                  </numIndex>
+                  <numIndex index="1">
+                    <numIndex index="0">true</numIndex>
+                    <numIndex index="1">true</numIndex>
+                  </numIndex>
+                  <numIndex index="2">
+                    <numIndex index="0">false</numIndex>
+                    <numIndex index="1">false</numIndex>
+                  </numIndex>
+                  <numIndex index="3">
+                    <numIndex index="0">fullscreenonly</numIndex>
+                    <numIndex index="1">fullscreenonly</numIndex>
+                  </numIndex>
+                </items>
+                <default></default>
+              </config>
+            </TCEforms>
+          </settings.default.mouseZoom>
+
+          <settings.default.draggable>
+            <TCEforms>
+              <label>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.draggable</label>
+              <description>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.draggable.description</description>
+              <config>
+                <type>check</type>
+                <items>
+                  <numIndex index="0">
+                    <numIndex index="0">LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.checkbox.enabled</numIndex>
+                  </numIndex>
+                </items>
+                <default>1</default>
+              </config>
+            </TCEforms>
+          </settings.default.draggable>
+
+          <settings.default.disableKeyboardCtrl>
+            <TCEforms>
+              <label>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.disableKeyboardCtrl</label>
+              <description>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.disableKeyboardCtrl.description</description>
+              <config>
+                <type>check</type>
+                <items>
+                  <numIndex index="0">
+                    <numIndex index="0">LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.checkbox.enabled</numIndex>
+                  </numIndex>
+                </items>
+                <default>0</default>
+              </config>
+            </TCEforms>
+          </settings.default.disableKeyboardCtrl>
+
+          <settings.default.showFullscreenCtrl>
+            <TCEforms>
+              <label>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.showFullscreenCtrl</label>
+              <description>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.showFullscreenCtrl.description</description>
+              <config>
+                <type>check</type>
+                <items>
+                  <numIndex index="0">
+                    <numIndex index="0">LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.checkbox.enabled</numIndex>
+                  </numIndex>
+                </items>
+                <default>1</default>
+              </config>
+            </TCEforms>
+          </settings.default.showFullscreenCtrl>
+
+          <settings.default.showControls>
+            <TCEforms>
+              <label>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.showControls</label>
+              <description>LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.panorama.options.showControls.description</description>
+              <config>
+                <type>check</type>
+                <items>
+                  <numIndex index="0">
+                    <numIndex index="0">LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:flexform.checkbox.enabled</numIndex>
+                  </numIndex>
+                </items>
+                <default>1</default>
+              </config>
+            </TCEforms>
+          </settings.default.showControls>
+        </el>
+      </ROOT>
+    </options>
+  </sheets>
+</T3DataStructure>
