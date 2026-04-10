@@ -128,6 +128,20 @@ class PannellumController extends ActionController
                 $rowsByUid[(int)$row['uid']] = $row;
             }
             $now = time();
+
+            // build array of available scenes first to sort out hotspots type "scene" with missing target later on
+            foreach ($sceneUids as $uid) {
+                if (!isset($rowsByUid[$uid])) {
+                    continue;
+                }
+                $row = $rowsByUid[$uid];
+                $identifier = trim((string)$row['identifier']);
+                if ($identifier === '') {
+                    continue;
+                }
+                $scenes[$identifier] = [];
+            }
+
             foreach ($sceneUids as $uid) {
                 if (!isset($rowsByUid[$uid])) {
                     continue;
@@ -198,6 +212,10 @@ class PannellumController extends ActionController
                             if ($type === 'scene') {
                                 $sceneId = (string)($hs['sceneId'] ?? '');
                                 if ($sceneId !== '') { $hotspot['sceneId'] = $sceneId; }
+                                if (!array_key_exists($sceneId, $scenes)) {
+                                    // sort out hotspots type "scene" with missing target scene
+                                    continue;
+                                }
 
                                 // targetPitch: numeric or "same"
                                 $rawTargetPitch = isset($hs['targetPitch']) ? trim((string)$hs['targetPitch']) : '';
