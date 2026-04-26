@@ -27,6 +27,17 @@ CREATE TABLE tx_pannellum_scene (
   hotspot_debug tinyint(1) unsigned DEFAULT '0' NOT NULL,
   hotspots mediumtext NULL,
 
+  -- View parameters per scene (optional)
+  yaw varchar(32) DEFAULT '' NOT NULL,
+  pitch varchar(32) DEFAULT '' NOT NULL,
+  hfov varchar(32) DEFAULT '' NOT NULL,
+  min_yaw varchar(32) DEFAULT '' NOT NULL,
+  max_yaw varchar(32) DEFAULT '' NOT NULL,
+  min_pitch varchar(32) DEFAULT '' NOT NULL,
+  max_pitch varchar(32) DEFAULT '' NOT NULL,
+  min_hfov varchar(32) DEFAULT '' NOT NULL,
+  max_hfov varchar(32) DEFAULT '' NOT NULL,
+
   PRIMARY KEY (uid),
   KEY parent (pid),
   KEY language (l10n_parent,sys_language_uid)

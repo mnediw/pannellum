@@ -116,7 +116,14 @@ class PannellumController extends ActionController
             $qb = $connectionPool->getQueryBuilderForTable('tx_pannellum_scene');
             $qb->getRestrictions()->removeAll(); // we filter manually for hidden/deleted via enableFields is not trivial here
             $rows = $qb
-                ->select('uid', 'identifier', 'title', 'type', 'panorama', 'hotspot_debug', 'hotspots', 'hidden', 'deleted', 'starttime', 'endtime')
+                ->select(
+                    'uid', 'identifier', 'title', 'type', 'panorama', 'hotspot_debug', 'hotspots',
+                    // visibility
+                    'hidden', 'deleted', 'starttime', 'endtime',
+                    // view params
+                    'yaw', 'pitch', 'hfov',
+                    'min_yaw', 'max_yaw', 'min_pitch', 'max_pitch', 'min_hfov', 'max_hfov'
+                )
                 ->from('tx_pannellum_scene')
                 ->where($qb->expr()->in('uid', $qb->createNamedParameter($sceneUids, Connection::PARAM_INT_ARRAY)))
                 ->executeQuery()
@@ -182,6 +189,22 @@ class PannellumController extends ActionController
                     'type' => (string)($row['type'] ?? 'equirectangular'),
                     'panorama' => $panoramaUrl,
                 ];
+
+                // Optional view parameters per scene
+                $mapFloat = function ($v): ?float {
+                    if ($v === null) { return null; }
+                    $v = trim((string)$v);
+                    return $v === '' || !is_numeric($v) ? null : (float)$v;
+                };
+                $v = $mapFloat($row['yaw'] ?? null); if ($v !== null) { $sceneArr['yaw'] = $v; }
+                $v = $mapFloat($row['pitch'] ?? null); if ($v !== null) { $sceneArr['pitch'] = $v; }
+                $v = $mapFloat($row['hfov'] ?? null); if ($v !== null) { $sceneArr['hfov'] = $v; }
+                $v = $mapFloat($row['min_yaw'] ?? null); if ($v !== null) { $sceneArr['minYaw'] = $v; }
+                $v = $mapFloat($row['max_yaw'] ?? null); if ($v !== null) { $sceneArr['maxYaw'] = $v; }
+                $v = $mapFloat($row['min_pitch'] ?? null); if ($v !== null) { $sceneArr['minPitch'] = $v; }
+                $v = $mapFloat($row['max_pitch'] ?? null); if ($v !== null) { $sceneArr['maxPitch'] = $v; }
+                $v = $mapFloat($row['min_hfov'] ?? null); if ($v !== null) { $sceneArr['minHfov'] = $v; }
+                $v = $mapFloat($row['max_hfov'] ?? null); if ($v !== null) { $sceneArr['maxHfov'] = $v; }
                 if (!empty($row['hotspot_debug'])) {
                     $sceneArr['hotSpotDebug'] = (bool)$row['hotspot_debug'];
                 }

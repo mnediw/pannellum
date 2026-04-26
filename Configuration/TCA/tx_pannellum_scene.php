@@ -26,7 +26,7 @@ return [
     ],
     'types' => [
         '1' => [
-            'showitem' => 'sys_language_uid,l10n_parent,l10n_diffsource, hidden, title, identifier, type, panorama, hotspot_debug, hotspots, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, starttime, endtime',
+            'showitem' => 'sys_language_uid,l10n_parent,l10n_diffsource, hidden, title, identifier, type, panorama, yaw, pitch, hfov, min_yaw, max_yaw, min_pitch, max_pitch, min_hfov, max_hfov, hotspot_debug, hotspots, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, starttime, endtime',
         ],
     ],
     'palettes' => [],
@@ -166,6 +166,98 @@ return [
                 'ds' => [
                     'default' => 'FILE:EXT:pannellum/Configuration/FlexForms/SceneHotspots.xml',
                 ],
+            ],
+        ],
+
+        // View parameters
+        'yaw' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.yaw',
+            'description' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.yaw.description',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim,double2',
+                'size' => 10,
+            ],
+        ],
+        'pitch' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.pitch',
+            'description' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.pitch.description',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim,double2',
+                'size' => 10,
+            ],
+        ],
+        'hfov' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.hfov',
+            'description' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.hfov.description',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim,double2',
+                'size' => 10,
+            ],
+        ],
+        'min_yaw' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.min_yaw',
+            'description' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.min_yaw.description',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim,double2',
+                'size' => 10,
+            ],
+        ],
+        'max_yaw' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.max_yaw',
+            'description' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.max_yaw.description',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim,double2',
+                'size' => 10,
+            ],
+        ],
+        'min_pitch' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.min_pitch',
+            'description' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.min_pitch.description',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim,double2',
+                'size' => 10,
+            ],
+        ],
+        'max_pitch' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.max_pitch',
+            'description' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.max_pitch.description',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim,double2',
+                'size' => 10,
+            ],
+        ],
+        'min_hfov' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.min_hfov',
+            'description' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.min_hfov.description',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim,double2',
+                'size' => 10,
+            ],
+        ],
+        'max_hfov' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.max_hfov',
+            'description' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.max_hfov.description',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim,double2',
+                'size' => 10,
             ],
         ],
     ],

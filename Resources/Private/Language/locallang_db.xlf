@@ -69,6 +69,26 @@
       <trans-unit id="tx_pannellum_scene.hotspots"><source>Hotspots</source></trans-unit>
       <trans-unit id="tx_pannellum_scene.hotspots.description"><source>Configure hotspots for this scene using the fields below.</source></trans-unit>
 
+      <!-- Scene view parameters -->
+      <trans-unit id="tx_pannellum_scene.yaw"><source>Yaw (°)</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.yaw.description"><source>Starting yaw position in degrees. Defaults to 0.</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.pitch"><source>Pitch (°)</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.pitch.description"><source>Starting pitch position in degrees. Defaults to 0.</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.hfov"><source>HFOV (°)</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.hfov.description"><source>Starting horizontal field of view in degrees. Defaults to 100.</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.min_yaw"><source>Min yaw (°)</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.min_yaw.description"><source>Minimum yaw (viewer edge) in degrees. Defaults to -180 (no limit).</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.max_yaw"><source>Max yaw (°)</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.max_yaw.description"><source>Maximum yaw (viewer edge) in degrees. Defaults to 180 (no limit).</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.min_pitch"><source>Min pitch (°)</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.min_pitch.description"><source>Minimum pitch (viewer edge) in degrees. Defaults to undefined, so center can reach -90.</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.max_pitch"><source>Max pitch (°)</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.max_pitch.description"><source>Maximum pitch (viewer edge) in degrees. Defaults to undefined, so center can reach 90.</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.min_hfov"><source>Min HFOV (°)</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.min_hfov.description"><source>Minimum horizontal field of view in degrees. Defaults to 50.</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.max_hfov"><source>Max HFOV (°)</source></trans-unit>
+      <trans-unit id="tx_pannellum_scene.max_hfov.description"><source>Maximum horizontal field of view in degrees. Defaults to 120.</source></trans-unit>
+
       <!-- Scene hotspots FlexForm labels -->
       <trans-unit id="flexform.scene.sheet.hotspots"><source>Hotspots</source></trans-unit>
       <trans-unit id="flexform.scene.hotspots.section"><source>Hotspots</source></trans-unit>
@@ -162,6 +182,26 @@
       <trans-unit id="tx_pannellum_scene.hotSpotDebug.description"><source>Zeigt zur Fehlersuche Markierungen der Hotspot‑Positionen im Viewer an.</source><target>Zeigt zur Fehlersuche Markierungen der Hotspot‑Positionen im Viewer an.</target></trans-unit>
       <trans-unit id="tx_pannellum_scene.hotspots"><source>Hotspots</source><target>Hotspots</target></trans-unit>
       <trans-unit id="tx_pannellum_scene.hotspots.description"><source>Hotspots für diese Szene über die folgenden Felder konfigurieren.</source><target>Hotspots für diese Szene über die folgenden Felder konfigurieren.</target></trans-unit>
+
+      <!-- Scene view parameters -->
+      <trans-unit id="tx_pannellum_scene.yaw"><source>Yaw (°)</source><target>Yaw (°)</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.yaw.description"><source>Start‑Yaw in Grad. Standard: 0.</source><target>Start‑Yaw in Grad. Standard: 0.</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.pitch"><source>Pitch (°)</source><target>Pitch (°)</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.pitch.description"><source>Start‑Pitch in Grad. Standard: 0.</source><target>Start‑Pitch in Grad. Standard: 0.</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.hfov"><source>HFOV (°)</source><target>HFOV (°)</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.hfov.description"><source>Start‑Sichtfeld (HFOV) in Grad. Standard: 100.</source><target>Start‑Sichtfeld (HFOV) in Grad. Standard: 100.</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.min_yaw"><source>Min. Yaw (°)</source><target>Min. Yaw (°)</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.min_yaw.description"><source>Minimales Yaw (Kantenwinkel) in Grad. Standard: −180 (keine Begrenzung).</source><target>Minimales Yaw (Kantenwinkel) in Grad. Standard: −180 (keine Begrenzung).</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.max_yaw"><source>Max. Yaw (°)</source><target>Max. Yaw (°)</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.max_yaw.description"><source>Maximales Yaw (Kantenwinkel) in Grad. Standard: 180 (keine Begrenzung).</source><target>Maximales Yaw (Kantenwinkel) in Grad. Standard: 180 (keine Begrenzung).</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.min_pitch"><source>Min. Pitch (°)</source><target>Min. Pitch (°)</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.min_pitch.description"><source>Minimales Pitch (Kantenwinkel) in Grad. Standard: nicht gesetzt, Zentrum kann −90 erreichen.</source><target>Minimales Pitch (Kantenwinkel) in Grad. Standard: nicht gesetzt, Zentrum kann −90 erreichen.</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.max_pitch"><source>Max. Pitch (°)</source><target>Max. Pitch (°)</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.max_pitch.description"><source>Maximales Pitch (Kantenwinkel) in Grad. Standard: nicht gesetzt, Zentrum kann 90 erreichen.</source><target>Maximales Pitch (Kantenwinkel) in Grad. Standard: nicht gesetzt, Zentrum kann 90 erreichen.</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.min_hfov"><source>Min. HFOV (°)</source><target>Min. HFOV (°)</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.min_hfov.description"><source>Minimales horizontales Sichtfeld (HFOV) in Grad. Standard: 50.</source><target>Minimales horizontales Sichtfeld (HFOV) in Grad. Standard: 50.</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.max_hfov"><source>Max. HFOV (°)</source><target>Max. HFOV (°)</target></trans-unit>
+      <trans-unit id="tx_pannellum_scene.max_hfov.description"><source>Maximales horizontales Sichtfeld (HFOV) in Grad. Standard: 120.</source><target>Maximales horizontales Sichtfeld (HFOV) in Grad. Standard: 120.</target></trans-unit>
 
       <!-- Scene hotspots FlexForm labels -->
       <trans-unit id="flexform.scene.sheet.hotspots"><source>Hotspots</source><target>Hotspots</target></trans-unit>
