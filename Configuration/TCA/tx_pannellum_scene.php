@@ -168,8 +168,6 @@ return [
                 ],
             ],
         ],
-
-        // View parameters
         'yaw' => [
             'exclude' => true,
             'label' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.yaw',
@@ -178,6 +176,7 @@ return [
                 'type' => 'input',
                 'eval' => 'trim,double2',
                 'size' => 10,
+                'default' => '0.00',
             ],
         ],
         'pitch' => [
@@ -188,6 +187,7 @@ return [
                 'type' => 'input',
                 'eval' => 'trim,double2',
                 'size' => 10,
+                'default' => '0.00',
             ],
         ],
         'hfov' => [
@@ -198,6 +198,7 @@ return [
                 'type' => 'input',
                 'eval' => 'trim,double2',
                 'size' => 10,
+                'default' => '100.00',
             ],
         ],
         'min_yaw' => [
@@ -208,6 +209,7 @@ return [
                 'type' => 'input',
                 'eval' => 'trim,double2',
                 'size' => 10,
+                'default' => '-180.00',
             ],
         ],
         'max_yaw' => [
@@ -218,6 +220,7 @@ return [
                 'type' => 'input',
                 'eval' => 'trim,double2',
                 'size' => 10,
+                'default' => '180.00',
             ],
         ],
         'min_pitch' => [
@@ -228,6 +231,7 @@ return [
                 'type' => 'input',
                 'eval' => 'trim,double2',
                 'size' => 10,
+                'default' => '-180.00',
             ],
         ],
         'max_pitch' => [
@@ -238,6 +242,7 @@ return [
                 'type' => 'input',
                 'eval' => 'trim,double2',
                 'size' => 10,
+                'default' => '180.00',
             ],
         ],
         'min_hfov' => [
@@ -248,6 +253,7 @@ return [
                 'type' => 'input',
                 'eval' => 'trim,double2',
                 'size' => 10,
+                'default' => '50.00',
             ],
         ],
         'max_hfov' => [
@@ -258,6 +264,7 @@ return [
                 'type' => 'input',
                 'eval' => 'trim,double2',
                 'size' => 10,
+                'default' => '120.00',
             ],
         ],
     ],
