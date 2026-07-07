@@ -18,6 +18,3 @@ $pluginSignature = 'pannellum_panorama';
     $pluginSignature,
     'FILE:EXT:pannellum/Configuration/FlexForms/Panorama.xml'
 );
-
-// Allow custom table on standard pages
-ExtensionManagementUtility::allowTableOnStandardPages('tx_pannellum_scene');

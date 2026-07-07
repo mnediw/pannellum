@@ -23,6 +23,11 @@ return [
         'typeicon_classes' => [
             'default' => 'extension-pannellum',
         ],
+        'security' => [
+            // Allow this custom table on standard pages (replaces the removed
+            // ExtensionManagementUtility::allowTableOnStandardPages()).
+            'ignorePageTypeRestriction' => true,
+        ],
     ],
     'types' => [
         '1' => [
