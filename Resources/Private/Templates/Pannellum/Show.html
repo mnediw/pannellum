@@ -13,17 +13,10 @@
         defer="true" />
     <f:asset.script identifier="pannellum-init" src="EXT:pannellum/Resources/Public/JavaScript/pannellum-init.js" defer="true" priority="true"/>
 
-    <style>
-        .pannellum-container {
-            width: 100%;
-            aspect-ratio: 4 / 3;
-            margin:auto;
-        }
-        .pannellum-container .pnlm-preview-img {
-            background-repeat:no-repeat;
-            background-size: initial;
-        }
-    </style>
+    <f:asset.css
+        identifier="pannellum-container-css"
+        href="EXT:pannellum/Resources/Public/Css/Pannellum.css"
+        media="all" />
 
     <div id="panorama-{contentElementId}"
          class="pannellum-container"
