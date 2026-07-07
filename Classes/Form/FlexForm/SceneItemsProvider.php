@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Diw\Pannellum\Form\FlexForm;
 
+use TYPO3\CMS\Core\Database\Connection;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -32,8 +33,8 @@ class SceneItemsProvider
             ->from('tx_pannellum_scene')
             ->where(
                 $qb->expr()->and(
-                    $qb->expr()->eq('deleted', $qb->createNamedParameter(0, \PDO::PARAM_INT)),
-                    $qb->expr()->eq('hidden', $qb->createNamedParameter(0, \PDO::PARAM_INT))
+                    $qb->expr()->eq('deleted', $qb->createNamedParameter(0, Connection::PARAM_INT)),
+                    $qb->expr()->eq('hidden', $qb->createNamedParameter(0, Connection::PARAM_INT))
                 )
             )
             ->orderBy('identifier', 'ASC')

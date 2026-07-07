@@ -9,7 +9,7 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Service\FlexFormService;
-use Doctrine\DBAL\Connection;
+use TYPO3\CMS\Core\Database\Connection;
 use TYPO3\CMS\Core\Resource\FileRepository;
 
 class PannellumController extends ActionController
@@ -21,7 +21,7 @@ class PannellumController extends ActionController
 
         // Determine current content element UID for unique DOM ids
         $contentElementId = 0;
-        $contentObject = $this->configurationManager->getContentObject();
+        $contentObject = $this->request->getAttribute('currentContentObject');
         if ($contentObject && isset($contentObject->data['uid'])) {
             $contentElementId = (int)$contentObject->data['uid'];
         }
