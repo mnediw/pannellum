@@ -37,8 +37,3 @@ $iconRegistry->registerIcon(
     SvgIconProvider::class,
     ['source' => 'EXT:pannellum/Resources/Public/Icons/Extension.svg']
 );
-
-// Add PageTS for new content element wizard
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-    "@import 'EXT:pannellum/Configuration/PageTS/ContentElementWizard.typoscript'"
-);
