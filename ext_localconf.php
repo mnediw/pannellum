@@ -6,6 +6,7 @@ use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 use TYPO3\CMS\Core\Imaging\IconRegistry;
 use TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Information\Typo3Version;
 
 // Register Extbase plugin
 ExtensionUtility::configurePlugin(
@@ -37,3 +38,13 @@ $iconRegistry->registerIcon(
     SvgIconProvider::class,
     ['source' => 'EXT:pannellum/Resources/Public/Icons/Extension.svg']
 );
+
+// Automatic inclusion of an extension's Configuration/page.tsconfig was introduced
+// in TYPO3 v13. On older versions it must be imported explicitly, otherwise the
+// content element wizard configuration is not loaded.
+$versionInformation = GeneralUtility::makeInstance(Typo3Version::class);
+if ($versionInformation->getMajorVersion() < 13) {
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+        '@import "EXT:pannellum/Configuration/page.tsconfig"'
+    );
+}
