@@ -6,28 +6,24 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Resource\File;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
-// Register the plugin (list_type)
+// Register the plugin as its own content type (CType)
 ExtensionUtility::registerPlugin(
     'Pannellum',
     'Panorama',
-    '360Grad Panorama'
+    '360Grad Panorama',
+    'extension-pannellum'
 );
 
-// Configure plugin content element
 $pluginSignature = 'pannellum_panorama';
 
-// Add FlexForm
+// Register the FlexForm data structure for this content type
 ExtensionManagementUtility::addPiFlexFormValue(
-    $pluginSignature,
-    'FILE:EXT:pannellum/Configuration/FlexForms/Panorama.xml'
+    '*',
+    'FILE:EXT:pannellum/Configuration/FlexForms/Panorama.xml',
+    $pluginSignature
 );
 
-// Adjust tt_content subtype lists
-$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
-$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'pages,recursive';
-
-// Add preview image FAL field for the plugin (shown only on our subtype)
-// 1) Register TCA column
+// Register the preview image FAL field on tt_content
 ExtensionManagementUtility::addTCAcolumns('tt_content', [
     'tx_pannellum_preview' => [
         'exclude' => true,
@@ -54,6 +50,23 @@ ExtensionManagementUtility::addTCAcolumns('tt_content', [
     ],
 ]);
 
-// 2) Show the field only for our plugin subtype
-$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature]
-    .= ',tx_pannellum_preview';
+// Define the editing form (showitem) for the plugin content type, including the
+// preview image field and the FlexForm. The standard content-element palettes are
+// provided by fluid_styled_content and are resolved when the form is rendered.
+$GLOBALS['TCA']['tt_content']['types'][$pluginSignature] = [
+    'showitem' => '
+        --palette--;;general,
+        --palette--;;headers,
+        tx_pannellum_preview,
+        pi_flexform,
+        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:appearance,
+        --palette--;;frames,
+        --palette--;;appearanceLinks,
+        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+        --palette--;;language,
+        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+        --palette--;;hidden,
+        --palette--;;access,
+        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
+    ',
+];

@@ -12,7 +12,8 @@ ExtensionUtility::configurePlugin(
     'Pannellum',
     'Panorama',
     [\Diw\Pannellum\Controller\PannellumController::class => 'show'],
-    []
+    [],
+    ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
 
 // TypoScript setup for templates
