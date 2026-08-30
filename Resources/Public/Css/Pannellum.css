@@ -1,0 +1,10 @@
+.pannellum-container {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    margin: auto;
+}
+
+.pannellum-container .pnlm-preview-img {
+    background-repeat: no-repeat;
+    background-size: initial;
+}

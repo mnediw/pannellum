@@ -8,7 +8,6 @@ return [
         'label' => 'title',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
-        'cruser_id' => 'cruser_id',
         'delete' => 'deleted',
         'enablecolumns' => [
             'disabled' => 'hidden',
@@ -22,6 +21,11 @@ return [
         'searchFields' => 'identifier,title,panorama',
         'typeicon_classes' => [
             'default' => 'extension-pannellum',
+        ],
+        'security' => [
+            // Allow this custom table on standard pages (replaces the removed
+            // ExtensionManagementUtility::allowTableOnStandardPages()).
+            'ignorePageTypeRestriction' => true,
         ],
     ],
     'types' => [
@@ -97,7 +101,8 @@ return [
             'description' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.identifier.description',
             'config' => [
                 'type' => 'input',
-                'eval' => 'trim,alphanum_x,required',
+                'eval' => 'trim,alphanum_x',
+                'required' => true,
                 'size' => 30,
             ],
         ],
@@ -107,7 +112,8 @@ return [
             'description' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.title.description',
             'config' => [
                 'type' => 'input',
-                'eval' => 'trim,required',
+                'eval' => 'trim',
+                'required' => true,
                 'size' => 50,
             ],
         ],
@@ -119,8 +125,8 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['equirectangular', 'equirectangular'],
-                    ['cubemap', 'cubemap'],
+                    ['label' => 'equirectangular', 'value' => 'equirectangular'],
+                    ['label' => 'cubemap', 'value' => 'cubemap'],
                 ],
                 'default' => 'equirectangular',
             ],
@@ -173,10 +179,9 @@ return [
             'label' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.yaw',
             'description' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.yaw.description',
             'config' => [
-                'type' => 'input',
-                'eval' => 'trim,double2',
-                'size' => 10,
-                'default' => '0.00',
+                'type' => 'number',
+                'format' => 'decimal',
+                'default' => 0.0,
             ],
         ],
         'pitch' => [
@@ -184,10 +189,9 @@ return [
             'label' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.pitch',
             'description' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.pitch.description',
             'config' => [
-                'type' => 'input',
-                'eval' => 'trim,double2',
-                'size' => 10,
-                'default' => '0.00',
+                'type' => 'number',
+                'format' => 'decimal',
+                'default' => 0.0,
             ],
         ],
         'hfov' => [
@@ -195,10 +199,9 @@ return [
             'label' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.hfov',
             'description' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.hfov.description',
             'config' => [
-                'type' => 'input',
-                'eval' => 'trim,double2',
-                'size' => 10,
-                'default' => '100.00',
+                'type' => 'number',
+                'format' => 'decimal',
+                'default' => 100.0,
             ],
         ],
         'min_yaw' => [
@@ -206,10 +209,9 @@ return [
             'label' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.min_yaw',
             'description' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.min_yaw.description',
             'config' => [
-                'type' => 'input',
-                'eval' => 'trim,double2',
-                'size' => 10,
-                'default' => '-180.00',
+                'type' => 'number',
+                'format' => 'decimal',
+                'default' => -180.0,
             ],
         ],
         'max_yaw' => [
@@ -217,10 +219,9 @@ return [
             'label' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.max_yaw',
             'description' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.max_yaw.description',
             'config' => [
-                'type' => 'input',
-                'eval' => 'trim,double2',
-                'size' => 10,
-                'default' => '180.00',
+                'type' => 'number',
+                'format' => 'decimal',
+                'default' => 180.0,
             ],
         ],
         'min_pitch' => [
@@ -228,10 +229,9 @@ return [
             'label' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.min_pitch',
             'description' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.min_pitch.description',
             'config' => [
-                'type' => 'input',
-                'eval' => 'trim,double2',
-                'size' => 10,
-                'default' => '-180.00',
+                'type' => 'number',
+                'format' => 'decimal',
+                'default' => -180.0,
             ],
         ],
         'max_pitch' => [
@@ -239,10 +239,9 @@ return [
             'label' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.max_pitch',
             'description' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.max_pitch.description',
             'config' => [
-                'type' => 'input',
-                'eval' => 'trim,double2',
-                'size' => 10,
-                'default' => '180.00',
+                'type' => 'number',
+                'format' => 'decimal',
+                'default' => 180.0,
             ],
         ],
         'min_hfov' => [
@@ -250,10 +249,9 @@ return [
             'label' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.min_hfov',
             'description' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.min_hfov.description',
             'config' => [
-                'type' => 'input',
-                'eval' => 'trim,double2',
-                'size' => 10,
-                'default' => '50.00',
+                'type' => 'number',
+                'format' => 'decimal',
+                'default' => 50.0,
             ],
         ],
         'max_hfov' => [
@@ -261,10 +259,9 @@ return [
             'label' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.max_hfov',
             'description' => 'LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:tx_pannellum_scene.max_hfov.description',
             'config' => [
-                'type' => 'input',
-                'eval' => 'trim,double2',
-                'size' => 10,
-                'default' => '120.00',
+                'type' => 'number',
+                'format' => 'decimal',
+                'default' => 120.0,
             ],
         ],
     ],

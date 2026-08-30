@@ -7,10 +7,11 @@ namespace Diw\Pannellum\Controller;
 use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Database\Connection;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Service\FlexFormService;
-use Doctrine\DBAL\Connection;
 use TYPO3\CMS\Core\Resource\FileRepository;
+use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
 class PannellumController extends ActionController
 {
@@ -21,9 +22,13 @@ class PannellumController extends ActionController
 
         // Determine current content element UID for unique DOM ids
         $contentElementId = 0;
-        $contentObject = $this->configurationManager->getContentObject();
-        if ($contentObject && isset($contentObject->data['uid'])) {
-            $contentElementId = (int)$contentObject->data['uid'];
+        $contentObject = $this->request->getAttribute('currentContentObject');
+        if ($contentObject instanceof ContentObjectRenderer) {
+            // Extension scanner false positive for #101955: this reads the
+            // ContentObjectRenderer "data" property (the current record), not the
+            // now-protected "data" property of the GifBuilder image-generation class.
+            // @extensionScannerIgnoreLine
+            $contentElementId = (int)($contentObject->data['uid'] ?? 0);
         }
 
         $defaults = [

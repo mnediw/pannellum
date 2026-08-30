@@ -6,13 +6,15 @@ use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 use TYPO3\CMS\Core\Imaging\IconRegistry;
 use TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Information\Typo3Version;
 
 // Register Extbase plugin
 ExtensionUtility::configurePlugin(
     'Pannellum',
     'Panorama',
     [\Diw\Pannellum\Controller\PannellumController::class => 'show'],
-    []
+    [],
+    ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
 
 // TypoScript setup for templates
@@ -37,7 +39,12 @@ $iconRegistry->registerIcon(
     ['source' => 'EXT:pannellum/Resources/Public/Icons/Extension.svg']
 );
 
-// Add PageTS for new content element wizard
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-    "@import 'EXT:pannellum/Configuration/PageTS/ContentElementWizard.typoscript'"
-);
+// Automatic inclusion of an extension's Configuration/page.tsconfig was introduced
+// in TYPO3 v13. On older versions it must be imported explicitly, otherwise the
+// content element wizard configuration is not loaded.
+$versionInformation = GeneralUtility::makeInstance(Typo3Version::class);
+if ($versionInformation->getMajorVersion() < 13) {
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+        '@import "EXT:pannellum/Configuration/page.tsconfig"'
+    );
+}

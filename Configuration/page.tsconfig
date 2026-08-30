@@ -5,8 +5,7 @@ mod.wizards.newContentElement.wizardItems.plugins {
       title = LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:plugin.title
       description = LLL:EXT:pannellum/Resources/Private/Language/locallang_db.xlf:plugin.title
       tt_content_defValues {
-        CType = list
-        list_type = pannellum_panorama
+        CType = pannellum_panorama
       }
     }
   }
