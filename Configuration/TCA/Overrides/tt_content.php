@@ -3,7 +3,7 @@
 defined('TYPO3') or die();
 
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-use TYPO3\CMS\Core\Resource\File;
+use TYPO3\CMS\Core\Resource\FileType;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 // Register the plugin as its own content type (CType)
@@ -15,13 +15,6 @@ ExtensionUtility::registerPlugin(
 );
 
 $pluginSignature = 'pannellum_panorama';
-
-// Register the FlexForm data structure for this content type
-ExtensionManagementUtility::addPiFlexFormValue(
-    '*',
-    'FILE:EXT:pannellum/Configuration/FlexForms/Panorama.xml',
-    $pluginSignature
-);
 
 // Register the preview image FAL field on tt_content
 ExtensionManagementUtility::addTCAcolumns('tt_content', [
@@ -41,7 +34,7 @@ ExtensionManagementUtility::addTCAcolumns('tt_content', [
                     '0' => [
                         'showitem' => '--palette--;;filePalette',
                     ],
-                    File::FILETYPE_IMAGE => [
+                    FileType::IMAGE->value => [
                         'showitem' => '--palette--;;filePalette',
                     ],
                 ],
@@ -69,4 +62,11 @@ $GLOBALS['TCA']['tt_content']['types'][$pluginSignature] = [
         --palette--;;access,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
     ',
+    'columnsOverrides' => [
+        'pi_flexform' => [
+            'config' => [
+                'ds' => 'FILE:EXT:pannellum/Configuration/FlexForms/Panorama.xml',
+            ],
+        ],
+    ],
 ];

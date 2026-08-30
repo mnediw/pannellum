@@ -1,6 +1,6 @@
 ### Pannellum TYPO3 Extension (diw/pannellum)
 
-Diese Extension integriert Pannellum (JS 360°/VR Panorama Viewer) in TYPO3 v12/v13. 
+Diese Extension integriert Pannellum (JS 360°/VR Panorama Viewer) in TYPO3 v13/v14. 
 Die Inhalte werden über ein Plugin (Inhaltselement), eigenständige „Scene“-Datensätze und deren Hotspots konfiguriert. 
 Mehrere Panoramen pro Seite werden unterstützt.
 
@@ -11,9 +11,8 @@ Mehrere Panoramen pro Seite werden unterstützt.
 ```
 composer require diw/pannellum
 ```
-2) Extension im TYPO3-Backend aktivieren (Extension Manager).
-3) Datenbank-Upgrade ausführen (Install Tool → Datenbank vergleichen)
-4) Caches leeren.
+2) Datenbank-Upgrade ausführen (Install Tool → Datenbank vergleichen)
+3) Caches leeren.
 
 Hinweise
 - Pannellum-JS/CSS werden automatisch per CDN über Fluid `f:asset` eingebunden und dedupliziert.
@@ -30,9 +29,10 @@ Die Konfiguration gliedert sich in drei Bausteine, die zusammenspielen:
 - Erstellen Sie dort beliebig viele Datensätze vom Typ „Scene“.
 - Pro Scene wählen Sie das Panorama-Bild (FAL-Datei), vergeben einen eindeutigen `identifier` und einen `title`.
 - Im Reiter „Hotspots“ fügen Sie nach Bedarf Hotspots hinzu (z. B. Szenenwechsel oder Info-Links).
+- Wenn Sie im Backend der Sezen die Option- hotspot_debug (boolean) aktivieren, werden die Hotspot-Koordinaten im Frontend angezeigt (in der Developer-Konsole). Diese können Sie dann ins Backend eintragen, z.B als Position der Hotspots.
 
 2) Plugin platzieren und Szenen auswählen
-- Fügen Sie das Inhaltselement „Plugins → 360Grad Panorama“ (list_type: `pannellum_panorama`) ein.
+- Fügen Sie das Inhaltselement „Plugins → 360Grad Panorama“ (Type: `pannellum_panorama`) ein.
 - Reiter „Szenen“: Wählen Sie die gewünschten Scene-Datensätze in der gewünschten Reihenfolge. Die erste ausgewählte Scene wird automatisch als `firstScene` verwendet. Wenn in einer Scene Hotspot-Links zu einer anderen Scene enthalten sind die hier nicht gewählt wurde dann wird der betreffende Hotsot nicht angezeigt.
 - Reiter „Defaults“ und „Options“: Pflegen Sie globale Anzeige- und Steuerungsoptionen (siehe unten).
 - Am Inhaltselement steht zusätzlich ein FAL-Feld „Vorschaubild“ zur Verfügung 
