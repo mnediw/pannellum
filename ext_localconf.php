@@ -3,8 +3,6 @@
 defined('TYPO3') or die();
 
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
-use TYPO3\CMS\Core\Imaging\IconRegistry;
-use TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Information\Typo3Version;
 
@@ -30,14 +28,8 @@ plugin.tx_pannellum {
     "
 );
 
-// Register icon
-/** @var IconRegistry $iconRegistry */
-$iconRegistry = GeneralUtility::makeInstance(IconRegistry::class);
-$iconRegistry->registerIcon(
-    'extension-pannellum',
-    SvgIconProvider::class,
-    ['source' => 'EXT:pannellum/Resources/Public/Icons/Extension.svg']
-);
+// Icon registration now happens via Configuration/Icons.php (TYPO3 v14:
+// instantiating IconRegistry in ext_localconf.php is no longer allowed).
 
 // Automatic inclusion of an extension's Configuration/page.tsconfig was introduced
 // in TYPO3 v13. On older versions it must be imported explicitly, otherwise the
